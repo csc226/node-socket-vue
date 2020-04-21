@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>node接口</title>
+    <script src="jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $.ajax({
+            url: 'http://192.168.1.125:3000/getInfo',
+            type: 'get',
+            dataType: 'json',
+            success: function(data) {
+                console.log("data:", data)
+            },
+            error: function(err) {
+                console.log("err:", err)
+            }
+        })
+    </script>
+</body>
+
+</html>
